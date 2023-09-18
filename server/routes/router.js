@@ -47,10 +47,19 @@ router.get("/api/contacts", async (req, res) => {
   const query = {
     name: { $regex: search, $options: "i" },
   };
+
+  let sortOptions = {};
+
+  if (sort === "new" || sort === "old") {
+    sortOptions.datecreated = sort === "new" ? -1 : 1;
+  } else {
+    sortOptions.name = sort === "decname" ? -1 : 1;
+  }
+
   try {
     const userdata = await users
       .find(query)
-      .sort({ datecreated: sort == "new" ? -1 : 1 });
+      .sort(sortOptions);
 
     res.status(201).json(userdata);
   } catch (error) {

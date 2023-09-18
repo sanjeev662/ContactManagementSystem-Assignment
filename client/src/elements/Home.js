@@ -141,7 +141,7 @@ const Home = () => {
               </Form>
             </div>
             <div className="filter_newold" style={{ display: "flex" }}>
-              <h4>Short By :</h4>
+              <h4>Sort By :</h4>
               <Dropdown className="text-center">
                 <Dropdown.Toggle
                   className="dropdown_btn"
@@ -151,12 +151,18 @@ const Home = () => {
                   <i class="fa-solid fa-sort"></i>
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
+                <Dropdown.Item onClick={() => setSort("incname")}>
+                    Name Increasing Order
+                  </Dropdown.Item>
+                  <Dropdown.Item onClick={() => setSort("decname")}>
+                    Name Decreasing Order
+                  </Dropdown.Item>
                   <Dropdown.Item onClick={() => setSort("new")}>
-                    New Contact First
+                    Contact Created New First
                   </Dropdown.Item>
                   <Dropdown.Item onClick={() => setSort("old")}>
-                    Old Contact First
-                  </Dropdown.Item>
+                    Contact Created Old first
+                  </Dropdown.Item> 
                 </Dropdown.Menu>
               </Dropdown>
             </div>
