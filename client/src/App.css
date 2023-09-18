@@ -1,0 +1,42 @@
+.add_btn{
+    text-align: right;
+}
+.container{
+    overflow: auto;
+}
+.container-fluid{
+    overflow: auto;
+    background-color: rgb(101, 101, 172);
+}
+
+
+  
+
+.left_view h3{
+    font-size: 21px;
+}
+.left_view p{
+    font-weight: bolder;
+}
+.left_view span{
+    font-weight: 400;
+}
+
+
+.right_view h3{
+    font-size: 21px;
+}
+.right_view p{
+    font-weight: bolder;
+}
+.right_view span{
+    font-weight: 400;
+}
+
+.right_view p{
+    font-weight: 400;
+}
+
+.right_view span{
+    font-weight: 400;
+}
